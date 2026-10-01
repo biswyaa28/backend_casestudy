@@ -1,0 +1,155 @@
+/* Basic reset so the app fills the page with a plain, readable font. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f5f7;
+  color: #222;
+}
+
+/* Navbar shown on every protected page. */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px 24px;
+}
+
+.navbar-links a {
+  color: white;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-user button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* General page padding for every page below the navbar. */
+.page {
+  padding: 24px;
+}
+
+/* Tables used on the Dashboard and Approvals pages. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 12px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #ecf0f1;
+}
+
+/* Login and Transfer Request forms. */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-form,
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 6px;
+  width: 320px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.transfer-form {
+  margin-top: 12px;
+}
+
+input,
+select,
+button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: #1f618d;
+}
+
+/* Action buttons inside the Approvals table. */
+td button {
+  margin: 0 4px 0 0;
+  width: auto;
+}
+
+/* Success and error messages. */
+.success-message {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Status labels in the Approvals table. */
+.status-label {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #f9e79f;
+  color: #7d6608;
+}
+
+.status-approved {
+  background-color: #abebc6;
+  color: #196f3d;
+}
+
+.status-rejected {
+  background-color: #f5b7b1;
+  color: #922b21;
+}
