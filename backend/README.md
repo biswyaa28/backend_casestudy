@@ -1,5 +1,7 @@
 # Warehouse Stock Transfer Management - Backend
 
+See the [root README](../README.md) for the full project overview and architecture.
+
 ## Overview
 
 A simple REST API for a college case study. Staff can view warehouses/products and

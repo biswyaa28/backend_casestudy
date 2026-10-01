@@ -1,0 +1,10 @@
+# Normalize all text files to LF line endings in the repository,
+# regardless of what OS/editor a contributor uses.
+* text=auto eol=lf
+
+# Never treat these as text (avoids line-ending corruption).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg binary
+*.ico binary
