@@ -28,6 +28,11 @@ const createProduct = async (req, res) => {
     if (error.code === 11000) {
       return res.status(400).json({ message: "SKU already exists" });
     }
+    // Mongoose schema validation errors (e.g. a negative quantity) are
+    // the user's fault, so they are a 400, not a 500.
+    if (error.name === "ValidationError") {
+      return res.status(400).json({ message: error.message });
+    }
     return res.status(500).json({ message: error.message });
   }
 };
@@ -101,6 +106,11 @@ const updateProduct = async (req, res) => {
   } catch (error) {
     if (error.code === 11000) {
       return res.status(400).json({ message: "SKU already exists" });
+    }
+    // Mongoose schema validation errors (e.g. a negative quantity) are
+    // the user's fault, so they are a 400, not a 500.
+    if (error.name === "ValidationError") {
+      return res.status(400).json({ message: error.message });
     }
     return res.status(500).json({ message: error.message });
   }
