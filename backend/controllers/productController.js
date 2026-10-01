@@ -91,10 +91,16 @@ const updateProduct = async (req, res) => {
       return res.status(400).json({ message: "Stock must be an array" });
     }
 
-    // Replace the document's fields and return the updated version.
+    // Only include stock in the update if it was actually sent.
+    const update = { name, sku };
+    if (stock !== undefined) {
+      update.stock = stock;
+    }
+
+    // Replace the sent fields and return the updated version.
     const product = await Product.findByIdAndUpdate(
       req.params.id,
-      { name, sku, stock: stock || [] },
+      update,
       { returnDocument: "after", runValidators: true }
     );
 
