@@ -1,6 +1,6 @@
 # Warehouse Stock Transfer Management
 
-[![CI](https://github.com/biswyaa28/warehouse-stock-transfer/actions/workflows/ci.yml/badge.svg)](https://github.com/biswyaa28/warehouse-stock-transfer/actions/workflows/ci.yml)
+[![CI](https://github.com/biswyaa28/backend_casestudy/actions/workflows/ci.yml/badge.svg)](https://github.com/biswyaa28/backend_casestudy/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A full-stack case study app for managing stock transfers between warehouses.
@@ -76,8 +76,8 @@ Requires Node.js 20.19+ (see `.nvmrc`) and a MongoDB connection string (local
 or [Atlas](https://www.mongodb.com/cloud/atlas)).
 
 ```bash
-git clone https://github.com/<your-username>/warehouse-stock-transfer.git
-cd warehouse-stock-transfer
+git clone https://github.com/biswyaa28/backend_casestudy.git
+cd backend_casestudy
 
 # Backend
 cd backend
