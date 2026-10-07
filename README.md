@@ -1,6 +1,5 @@
 # Warehouse Stock Transfer Management
 
-[![CI](https://github.com/biswyaa28/backend_casestudy/actions/workflows/ci.yml/badge.svg)](https://github.com/biswyaa28/backend_casestudy/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A full-stack case study app for managing stock transfers between warehouses.
@@ -50,7 +49,6 @@ flowchart TB
 | Backend | Node.js, Express.js, Mongoose |
 | Database | MongoDB (Atlas) |
 | Auth | JWT (`jsonwebtoken`), password hashing (`bcryptjs`) |
-| CI | GitHub Actions (install + build checks on every push/PR) |
 
 ## Project structure
 
@@ -67,7 +65,6 @@ warehouse-stock-transfer/
 │   └── src/
 │       ├── components/  Navbar, ProtectedRoute
 │       └── pages/       Login, Dashboard, TransferForm, Approvals
-└── .github/workflows/   CI pipeline
 ```
 
 ## Getting started
@@ -128,8 +125,6 @@ There is no automated test suite yet. The app was verified with:
 - A scripted end-to-end HTTP check (register/login, CRUD permissions,
   stock-transfer approve/reject logic, status filters, edge cases).
 - A real-browser (Playwright) walkthrough of the staff and manager flows.
-- CI (`.github/workflows/ci.yml`) installs both apps and builds the frontend
-  on every push/PR, catching dependency or build breakage.
 
 See `backend/postman_collection.json` for manual API testing.
 
